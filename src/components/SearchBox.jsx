@@ -40,7 +40,7 @@ export default function SearchBox({ initialService = '', initialLocation = '', v
             value={service}
             onChange={(e) => setService(e.target.value)}
             placeholder="ما الخدمة؟"
-            className="w-full pr-9 pl-3 py-2.5 bg-white border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pr-9 pl-3 py-2.5 bg-white border border-gray-300 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
         <div className="relative flex-1">
@@ -54,7 +54,7 @@ export default function SearchBox({ initialService = '', initialLocation = '', v
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             placeholder="المنطقة"
-            className="w-full pr-9 pl-3 py-2.5 bg-white border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pr-9 pl-3 py-2.5 bg-white border border-gray-300 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
         <button
@@ -81,7 +81,7 @@ export default function SearchBox({ initialService = '', initialLocation = '', v
           value={service}
           onChange={(e) => setService(e.target.value)}
           placeholder="ما الخدمة التي تحتاجها؟"
-          className="w-full pr-12 pl-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-colors"
+          className="w-full pr-12 pl-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-base text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-colors"
         />
       </div>
 
@@ -97,7 +97,7 @@ export default function SearchBox({ initialService = '', initialLocation = '', v
           value={location}
           onChange={(e) => setLocation(e.target.value)}
           placeholder="المنطقة أو الحي"
-          className="w-full pr-12 pl-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-colors"
+          className="w-full pr-12 pl-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-base text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-colors"
         />
       </div>
 
