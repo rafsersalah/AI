@@ -45,7 +45,7 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-b from-blue-700 to-blue-800 text-white px-4 pt-10 pb-0">
+        <section className="bg-gradient-to-b from-blue-700 to-blue-800 text-white px-4 pt-10 pb-10">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
               <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight mb-3">
@@ -57,15 +57,12 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Search box */}
-            <div className="relative -mb-6">
-              <SearchBox />
-            </div>
+            <SearchBox />
           </div>
         </section>
 
         {/* Categories */}
-        <section className="px-4 pt-14 pb-8 max-w-5xl mx-auto">
+        <section className="px-4 pt-10 pb-8 max-w-5xl mx-auto">
           <div className="mt-2">
             <h2 className="text-xl font-extrabold text-gray-900 mb-1">تصفح الخدمات</h2>
             <p className="text-gray-500 text-sm mb-5">اختر الخدمة التي تحتاجها</p>
