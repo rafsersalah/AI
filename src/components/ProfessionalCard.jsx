@@ -7,7 +7,7 @@ import AvailabilityBadge from './AvailabilityBadge';
 import ContactButtons from './ContactButtons';
 
 const avatarColors = [
-  ['bg-blue-600',   'text-white'],
+  ['bg-sky-600',   'text-white'],
   ['bg-purple-600', 'text-white'],
   ['bg-green-600',  'text-white'],
   ['bg-orange-500', 'text-white'],
@@ -46,7 +46,7 @@ export default function ProfessionalCard({ pro }) {
           <div className="flex items-start justify-between gap-2">
             <div>
               <h3 className="font-bold text-gray-900 text-base leading-tight">{pro.name}</h3>
-              <p className="text-blue-700 font-semibold text-sm mt-0.5">{pro.profession}</p>
+              <p className="text-sky-700 font-semibold text-sm mt-0.5">{pro.profession}</p>
             </div>
             <div className="flex flex-col items-end gap-1 flex-shrink-0">
               <VerificationBadge verified={pro.verified} size="sm" />

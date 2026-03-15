@@ -52,17 +52,17 @@ export default function JoinPage() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-b from-blue-700 to-blue-800 text-white px-4 py-12 text-center">
+        <section className="bg-gradient-to-b from-sky-700 to-sky-800 text-white px-4 py-12 text-center">
           <div className="max-w-xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-blue-600 rounded-full px-3 py-1.5 text-sm font-semibold mb-4 border border-blue-500">
+            <div className="inline-flex items-center gap-2 bg-sky-600 rounded-full px-3 py-1.5 text-sm font-semibold mb-4 border border-sky-500">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
               التسجيل مجاناً
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight mb-3">
               اجعل عملك يصل
-              <span className="block text-blue-200">لعملاء أكثر</span>
+              <span className="block text-sky-200">لعملاء أكثر</span>
             </h1>
-            <p className="text-blue-100 leading-relaxed text-base max-w-md mx-auto">
+            <p className="text-sky-100 leading-relaxed text-base max-w-md mx-auto">
               سجّل ملفك المهني الآن وابدأ باستقبال طلبات العملاء في منطقتك مباشرةً، بدون رسوم ولا عمولات.
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function JoinPage() {
           <div className="max-w-2xl mx-auto grid grid-cols-4 gap-2 text-center">
             {stats.map((s, i) => (
               <div key={i}>
-                <p className="text-xl font-extrabold text-blue-700">{s.value}</p>
+                <p className="text-xl font-extrabold text-sky-700">{s.value}</p>
                 <p className="text-gray-500 text-xs mt-0.5">{s.label}</p>
               </div>
             ))}
@@ -89,7 +89,7 @@ export default function JoinPage() {
               <div className="space-y-4">
                 {benefits.map((b, i) => (
                   <div key={i} className="flex items-start gap-4 bg-white rounded-2xl border border-gray-200 p-4">
-                    <div className="w-10 h-10 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-sky-100 text-sky-700 rounded-xl flex items-center justify-center flex-shrink-0">
                       {b.icon}
                     </div>
                     <div>

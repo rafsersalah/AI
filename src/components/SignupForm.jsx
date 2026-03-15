@@ -58,7 +58,7 @@ export default function SignupForm() {
         </p>
         <button
           onClick={() => { setSubmitted(false); setForm({ fullName:'',phone:'',whatsapp:'',profession:'',city:'',neighborhoods:'',description:'',startingPrice:'',terms:false }); }}
-          className="mt-6 px-6 py-2.5 bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors text-sm"
+          className="mt-6 px-6 py-2.5 bg-sky-700 text-white font-bold rounded-xl hover:bg-sky-800 transition-colors text-sm"
         >
           تسجيل جديد
         </button>
@@ -166,7 +166,7 @@ export default function SignupForm() {
       {/* Photo upload (UI only) */}
       <div className="space-y-3">
         <Field label="صورة شخصية">
-          <label className="flex items-center justify-center gap-2 w-full py-8 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer hover:border-blue-400 hover:bg-blue-50 transition-colors bg-gray-50">
+          <label className="flex items-center justify-center gap-2 w-full py-8 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer hover:border-sky-400 hover:bg-sky-50 transition-colors bg-gray-50">
             <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
             </svg>
@@ -176,7 +176,7 @@ export default function SignupForm() {
         </Field>
 
         <Field label="صور الأعمال (اختياري)">
-          <label className="flex items-center justify-center gap-2 w-full py-6 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer hover:border-blue-400 hover:bg-blue-50 transition-colors bg-gray-50">
+          <label className="flex items-center justify-center gap-2 w-full py-6 border-2 border-dashed border-gray-300 rounded-xl cursor-pointer hover:border-sky-400 hover:bg-sky-50 transition-colors bg-gray-50">
             <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
             </svg>
@@ -191,7 +191,7 @@ export default function SignupForm() {
         <label className="block text-sm font-semibold text-gray-700 mb-2">تحديد الموقع</label>
         <button
           type="button"
-          className="w-full flex items-center justify-center gap-2 py-3 border-2 border-dashed border-gray-300 rounded-xl text-sm text-gray-600 hover:border-blue-400 hover:text-blue-700 hover:bg-blue-50 transition-colors bg-gray-50"
+          className="w-full flex items-center justify-center gap-2 py-3 border-2 border-dashed border-gray-300 rounded-xl text-sm text-gray-600 hover:border-sky-400 hover:text-sky-700 hover:bg-sky-50 transition-colors bg-gray-50"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -208,13 +208,13 @@ export default function SignupForm() {
             type="checkbox"
             checked={form.terms}
             onChange={(e) => update('terms', e.target.checked)}
-            className="mt-1 w-4 h-4 accent-blue-700 flex-shrink-0"
+            className="mt-1 w-4 h-4 accent-sky-700 flex-shrink-0"
           />
           <span className="text-sm leading-relaxed">
             أوافق على{' '}
-            <span className="text-blue-700 hover:underline cursor-pointer">شروط الاستخدام</span>
+            <span className="text-sky-700 hover:underline cursor-pointer">شروط الاستخدام</span>
             {' '}و{' '}
-            <span className="text-blue-700 hover:underline cursor-pointer">سياسة الخصوصية</span>
+            <span className="text-sky-700 hover:underline cursor-pointer">سياسة الخصوصية</span>
           </span>
         </label>
         {errors.terms && <p className="text-red-600 text-xs mt-1 mr-7">{errors.terms}</p>}
@@ -223,7 +223,7 @@ export default function SignupForm() {
       {/* Submit */}
       <button
         type="submit"
-        className="w-full py-4 bg-blue-700 hover:bg-blue-800 active:bg-blue-900 text-white font-extrabold text-lg rounded-xl transition-colors"
+        className="w-full py-4 bg-sky-700 hover:bg-sky-800 active:bg-sky-900 text-white font-extrabold text-lg rounded-xl transition-colors"
       >
         سجل الآن
       </button>
@@ -248,6 +248,6 @@ function inputClass(error) {
   return `w-full px-4 py-3 border rounded-xl text-base bg-gray-50 focus:outline-none focus:ring-2 focus:bg-white transition-colors ${
     error
       ? 'border-red-400 focus:ring-red-400'
-      : 'border-gray-200 focus:ring-blue-500 focus:border-transparent'
+      : 'border-gray-200 focus:ring-sky-500 focus:border-transparent'
   }`;
 }

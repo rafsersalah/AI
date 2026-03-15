@@ -96,7 +96,7 @@ export default function ResultsContent() {
                   action={
                     <Link
                       href="/results"
-                      className="px-5 py-2.5 bg-blue-700 text-white font-bold rounded-xl text-sm hover:bg-blue-800 transition-colors"
+                      className="px-5 py-2.5 bg-sky-700 text-white font-bold rounded-xl text-sm hover:bg-sky-800 transition-colors"
                     >
                       عرض جميع المهنيين
                     </Link>
@@ -118,8 +118,8 @@ export default function ResultsContent() {
                 neighborhoods={filtered.slice(0, 4).map((p) => p.city)}
                 className="h-96"
               />
-              <div className="mt-3 bg-blue-50 border border-blue-200 rounded-xl p-3">
-                <p className="text-xs text-blue-700 font-semibold text-center">
+              <div className="mt-3 bg-sky-50 border border-sky-200 rounded-xl p-3">
+                <p className="text-xs text-sky-700 font-semibold text-center">
                   خريطة تقريبية — نطاق الخدمة
                 </p>
               </div>

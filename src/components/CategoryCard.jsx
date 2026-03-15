@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 
 const categoryStyles = {
-  'سباك':         'bg-blue-50   hover:bg-blue-100   border-blue-200   text-blue-800',
+  'سباك':         'bg-sky-50   hover:bg-sky-100   border-sky-200   text-sky-800',
   'كهربائي':      'bg-yellow-50 hover:bg-yellow-100 border-yellow-200 text-yellow-800',
   'نجار':         'bg-amber-50  hover:bg-amber-100  border-amber-200  text-amber-800',
   'فني تكييف':    'bg-cyan-50   hover:bg-cyan-100   border-cyan-200   text-cyan-800',
