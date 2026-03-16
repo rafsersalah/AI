@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-8 h-8 bg-blue-700 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-sky-700 rounded-lg flex items-center justify-center">
               <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
               </svg>
@@ -24,13 +24,13 @@ export default function Header() {
           <nav className="hidden sm:flex items-center gap-3">
             <Link
               href="/join"
-              className="text-gray-700 hover:text-blue-700 font-semibold text-sm transition-colors"
+              className="text-gray-700 hover:text-sky-700 font-semibold text-sm transition-colors"
             >
               أضف خدمتك
             </Link>
             <Link
               href="/join"
-              className="px-4 py-2 bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm rounded-xl transition-colors"
+              className="px-4 py-2 bg-sky-700 hover:bg-sky-800 text-white font-bold text-sm rounded-xl transition-colors"
             >
               دخول المهنيين
             </Link>
@@ -40,7 +40,7 @@ export default function Header() {
           <div className="flex sm:hidden items-center gap-2">
             <Link
               href="/join"
-              className="px-3 py-1.5 bg-blue-700 hover:bg-blue-800 text-white font-bold text-xs rounded-lg transition-colors"
+              className="px-3 py-1.5 bg-sky-700 hover:bg-sky-800 text-white font-bold text-xs rounded-lg transition-colors"
             >
               أضف خدمتك
             </Link>

@@ -40,7 +40,7 @@ export default function SearchBox({ initialService = '', initialLocation = '', v
             value={service}
             onChange={(e) => setService(e.target.value)}
             placeholder="ما الخدمة؟"
-            className="w-full pr-9 pl-3 py-2.5 bg-white border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pr-9 pl-3 py-2.5 bg-white border border-gray-300 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
           />
         </div>
         <div className="relative flex-1">
@@ -54,12 +54,12 @@ export default function SearchBox({ initialService = '', initialLocation = '', v
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             placeholder="المنطقة"
-            className="w-full pr-9 pl-3 py-2.5 bg-white border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pr-9 pl-3 py-2.5 bg-white border border-gray-300 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
           />
         </div>
         <button
           type="submit"
-          className="px-4 py-2.5 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-xl text-sm transition-colors flex-shrink-0"
+          className="px-4 py-2.5 bg-sky-700 hover:bg-sky-800 text-white font-bold rounded-xl text-sm transition-colors flex-shrink-0"
         >
           بحث
         </button>
@@ -81,7 +81,7 @@ export default function SearchBox({ initialService = '', initialLocation = '', v
           value={service}
           onChange={(e) => setService(e.target.value)}
           placeholder="ما الخدمة التي تحتاجها؟"
-          className="w-full pr-12 pl-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-colors"
+          className="w-full pr-12 pl-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-base text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent focus:bg-white transition-colors"
         />
       </div>
 
@@ -97,7 +97,7 @@ export default function SearchBox({ initialService = '', initialLocation = '', v
           value={location}
           onChange={(e) => setLocation(e.target.value)}
           placeholder="المنطقة أو الحي"
-          className="w-full pr-12 pl-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-colors"
+          className="w-full pr-12 pl-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-base text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent focus:bg-white transition-colors"
         />
       </div>
 
@@ -106,7 +106,7 @@ export default function SearchBox({ initialService = '', initialLocation = '', v
         type="button"
         onClick={handleGeolocate}
         disabled={locating}
-        className="flex items-center gap-2 text-blue-700 hover:text-blue-800 text-sm font-semibold transition-colors disabled:opacity-60"
+        className="flex items-center gap-2 text-sky-700 hover:text-sky-800 text-sm font-semibold transition-colors disabled:opacity-60"
       >
         {locating ? (
           <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
@@ -125,7 +125,7 @@ export default function SearchBox({ initialService = '', initialLocation = '', v
       {/* Search button */}
       <button
         type="submit"
-        className="w-full py-4 bg-blue-700 hover:bg-blue-800 active:bg-blue-900 text-white font-bold text-lg rounded-xl transition-colors flex items-center justify-center gap-2"
+        className="w-full py-4 bg-sky-700 hover:bg-sky-800 active:bg-sky-900 text-white font-bold text-lg rounded-xl transition-colors flex items-center justify-center gap-2"
       >
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 15.803 7.5 7.5 0 0016.803 15.803z" />

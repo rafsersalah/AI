@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
 }
 
 const avatarColors = [
-  'bg-blue-600', 'bg-purple-600', 'bg-green-600',
+  'bg-sky-600', 'bg-purple-600', 'bg-green-600',
   'bg-orange-500', 'bg-pink-600', 'bg-teal-600',
   'bg-indigo-600', 'bg-red-600',
 ];
@@ -70,7 +70,7 @@ export default async function ProPage({ params }) {
                   {/* Info */}
                   <div className="flex-1 min-w-0">
                     <h1 className="text-xl font-extrabold text-gray-900 leading-tight">{pro.name}</h1>
-                    <p className="text-blue-700 font-bold text-base mt-0.5">{pro.profession}</p>
+                    <p className="text-sky-700 font-bold text-base mt-0.5">{pro.profession}</p>
 
                     <div className="mt-2">
                       <RatingDisplay rating={pro.rating} reviewCount={pro.reviewCount} size="lg" />
@@ -110,7 +110,7 @@ export default async function ProPage({ params }) {
                 <ul className="space-y-2">
                   {pro.services.map((s, i) => (
                     <li key={i} className="flex items-center gap-3 text-sm text-gray-800">
-                      <span className="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+                      <span className="w-5 h-5 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center flex-shrink-0">
                         <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
@@ -204,9 +204,9 @@ export default async function ProPage({ params }) {
                 <p className="text-sm font-bold text-gray-700 mb-3">تواصل مع {pro.name}</p>
                 <ContactButtons phone={pro.phone} whatsapp={pro.whatsapp} variant="icon" />
               </div>
-              <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4 text-sm text-blue-800">
+              <div className="bg-sky-50 border border-sky-200 rounded-2xl p-4 text-sm text-sky-800">
                 <p className="font-bold mb-1">نصيحة</p>
-                <p className="leading-relaxed text-xs text-blue-700">تواصل مع المهني واشرح المشكلة بالتفصيل للحصول على سعر دقيق.</p>
+                <p className="leading-relaxed text-xs text-sky-700">تواصل مع المهني واشرح المشكلة بالتفصيل للحصول على سعر دقيق.</p>
               </div>
             </div>
           </div>

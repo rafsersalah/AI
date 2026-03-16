@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-1">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-sky-600 rounded-lg flex items-center justify-center">
                 <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
@@ -56,7 +56,7 @@ export default function Footer() {
             </p>
             <Link
               href="/join"
-              className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-colors"
+              className="inline-block px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white text-sm font-bold rounded-lg transition-colors"
             >
               أضف خدمتك مجاناً
             </Link>

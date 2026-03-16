@@ -45,14 +45,14 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="bg-gradient-to-b from-blue-700 to-blue-800 text-white px-4 pt-10 pb-10">
+        <section className="bg-gradient-to-b from-sky-700 to-sky-800 text-white px-4 pt-10 pb-10">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
               <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight mb-3">
                 ابحث عن مهني قريب منك
-                <span className="block text-blue-200">بسرعة وثقة</span>
+                <span className="block text-sky-200">بسرعة وثقة</span>
               </h1>
-              <p className="text-blue-100 text-base leading-relaxed max-w-md mx-auto">
+              <p className="text-sky-100 text-base leading-relaxed max-w-md mx-auto">
                 دليل المهنيين الموثوقين في منطقتك — سباكة، كهرباء، نجارة، تكييف، دهان وأكثر
               </p>
             </div>
@@ -80,7 +80,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {trustPoints.map((point, i) => (
                 <div key={i} className="flex items-start gap-4 sm:flex-col sm:items-center sm:text-center">
-                  <div className="w-12 h-12 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-sky-100 text-sky-700 rounded-2xl flex items-center justify-center flex-shrink-0">
                     {point.icon}
                   </div>
                   <div>
@@ -102,7 +102,7 @@ export default function HomePage() {
             </div>
             <a
               href="/results"
-              className="text-sm text-blue-700 hover:text-blue-800 font-semibold flex items-center gap-1"
+              className="text-sm text-sky-700 hover:text-sky-800 font-semibold flex items-center gap-1"
             >
               عرض الكل
               <svg className="w-4 h-4 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -119,15 +119,15 @@ export default function HomePage() {
         </section>
 
         {/* CTA for professionals */}
-        <section className="px-4 py-12 bg-blue-700 text-white">
+        <section className="px-4 py-12 bg-sky-700 text-white">
           <div className="max-w-lg mx-auto text-center">
             <h2 className="text-2xl font-extrabold mb-2">أنت مهني؟</h2>
-            <p className="text-blue-100 mb-6 leading-relaxed">
+            <p className="text-sky-100 mb-6 leading-relaxed">
               سجّل الآن واحصل على صفحة مهنية خاصة بك وعملاء جدد من منطقتك مجاناً.
             </p>
             <a
               href="/join"
-              className="inline-block px-8 py-3.5 bg-white text-blue-700 font-extrabold rounded-xl hover:bg-blue-50 transition-colors text-base"
+              className="inline-block px-8 py-3.5 bg-white text-sky-700 font-extrabold rounded-xl hover:bg-sky-50 transition-colors text-base"
             >
               أضف خدمتك مجاناً
             </a>

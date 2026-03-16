@@ -11,7 +11,7 @@ function getInitials(name) {
 }
 
 const avatarColors = [
-  'bg-blue-100 text-blue-700',
+  'bg-sky-100 text-sky-700',
   'bg-purple-100 text-purple-700',
   'bg-green-100 text-green-700',
   'bg-orange-100 text-orange-700',
