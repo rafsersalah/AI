@@ -91,6 +91,28 @@
   }
   .outcome-pick select option { color: #000; }
 
+  /* Speed control: − / + buttons that change the journey duration by 2s */
+  .speed-pick {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+  }
+  .speed-pick button {
+    width: 30px; height: 30px;
+    border: none; border-radius: 50%;
+    background: var(--accent);
+    color: #fff; font-size: 1rem; font-weight: 800;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.15s;
+  }
+  .speed-pick button:active { transform: scale(0.9); }
+  .speed-pick button:disabled { opacity: 0.35; cursor: not-allowed; }
+  .speed-pick .speed-value { color: var(--text); font-weight: 800; min-width: 34px; text-align: center; }
+
   /* ---------- The "world" — the scene that holds every station ---------- */
   /* position:relative so the packet (position:absolute) can fly inside it */
   .world {
@@ -277,6 +299,14 @@
         <option value="error">❌ Wrong password</option>
       </select>
     </label>
+    <!-- Speed control: total journey time, adjustable in 2s steps (5s fastest, 20s slowest).
+         You can change it even WHILE the packet is flying! -->
+    <div class="speed-pick">
+      ⏱ Speed:
+      <button id="speedDown" title="2 seconds faster">−</button>
+      <span class="speed-value" id="speedValue">10s</span>
+      <button id="speedUp" title="2 seconds slower">+</button>
+    </div>
   </div>
 
   <!-- ============================================================
@@ -421,6 +451,34 @@
   steps.forEach(() => dotsBox.appendChild(document.createElement("span")));
   const dots = [...dotsBox.children];
 
+  /*
+   * SPEED CONTROL.
+   * `flowSeconds` is the total time of the whole journey.
+   * Limits: 5s = fastest, 20s = slowest, changed in steps of 2s.
+   * It is read fresh on every step, so changing it mid-flight works too.
+   */
+  const SPEED_MIN = 5, SPEED_MAX = 20, SPEED_STEP = 2;
+  let flowSeconds = 10; // comfortable default in the middle
+
+  const speedDown  = document.getElementById("speedDown");
+  const speedUp    = document.getElementById("speedUp");
+  const speedValue = document.getElementById("speedValue");
+
+  function changeSpeed(delta) {
+    // Clamp so we can never go below 5s or above 20s
+    flowSeconds = Math.min(SPEED_MAX, Math.max(SPEED_MIN, flowSeconds + delta));
+    speedValue.textContent = flowSeconds + "s";
+    // Disable a button when its limit is reached
+    speedDown.disabled = flowSeconds === SPEED_MIN;
+    speedUp.disabled   = flowSeconds === SPEED_MAX;
+  }
+  speedDown.addEventListener("click", () => changeSpeed(-SPEED_STEP));
+  speedUp.addEventListener("click", () => changeSpeed(+SPEED_STEP));
+  changeSpeed(0); // initialize the label and button states
+
+  // How long one step lasts right now (total time / number of steps)
+  const stepMs = () => (flowSeconds * 1000) / steps.length;
+
   // `runId` lets Reset cancel an animation that is in progress:
   // every run remembers its own id and stops if a new id appears.
   let runId = 0;
@@ -486,6 +544,11 @@
       // The return trip gets a colored glow: green = success, red = error
       if (step.back) packet.classList.add(ok ? "success" : "error");
 
+      // The glide between stations takes ~60% of the step time, so the
+      // packet always arrives with time left for the viewer to read.
+      packet.style.transition =
+        `transform ${Math.round(stepMs() * 0.6)}ms cubic-bezier(0.45, 0, 0.25, 1), opacity 0.4s`;
+
       packet.textContent = step.icon;
       flyTo(step.station);
 
@@ -498,7 +561,7 @@
       stepText.textContent = typeof step.text === "function" ? step.text(ok) : step.text;
       dots.forEach((d, j) => d.className = j < i ? "done" : j === i ? "now" : "");
 
-      await sleep(1700);          // let the viewer read before moving on
+      await sleep(stepMs());      // wait based on the chosen speed
       if (myRun !== runId) return;
     }
 
